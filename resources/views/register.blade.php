@@ -12,54 +12,83 @@
 </head>
 <body>
 
-  	<section id="login">
-  		 <div class="f_nav">
-            <div class="container">
-                <div class="f_nav_before">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="logo">
-                                <a href="#">
-                                    <img src="assets/img/logo.png" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<section id="login">
+    <div class="f_nav">
+      <div class="container">
+        <div class="f_nav_before">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="logo">
+                <a href="index.html">
+                  <img src="assets/img/logo.png" alt="">
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-  	</section>
-  	<section id="login_form">
-  		<div class="container">
-  			<h1 class="text-center">Добре дошли в света на игрите!</h1>
-  			<div class="row">
-  				<div class="col-md-12">
-  					<div class="gamer_connect">
-	  					<form action="{{route('create.register')}}" method="POST">
-                          <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
-	  						<h3 class="text-center">Влизане</h3>
-	  						<div class="login_icon">
-	  							<i class="fa fa-user-circle-o" aria-hidden="true"></i>
-	  							<input type="text" name="login_name_or_email" placeholder="Потребителско име или Имейл">
-	  						</div>
-	  						<input type="submit" name="login_btn" value="Продължи">
-	  						<p>или</p>
-	  						<div class="google_login">
-	  							<a href="#">Влизане с Google</a>
-	  						</div>
-	  						<div class="facebook_login">
-	  							<a href="#">Влизане с Facebook</a>
-	  						</div>
-	  					</form>
-						<div class="register">
-							<h3 class="text-center">Нов сте в Gamertivity?</h3>
-							<a href="#">Регистрация</a>
-						</div>
-					</div>
-  				</div>
-  			</div>
-  		</div>
-  	</section>
+      </div>
+    </div>
+  </section>
+  <section id="login_form">
+    <div class="container">
+      <h1 class="text-center">Добре дошли в света на игрите!</h1>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="gamer_connect">
+            <form action="{{route('auth.login')}}" method="POST" @if(isset($signup)) class="hidden" @endif id="login_panel">
+            @csrf
+              <h3 class="text-center">Влизане</h3>
+              <div class="login_icon">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <input type="text" name="email" placeholder="Потребителско име или Имейл">
+              </div>
+              <div class="login_icon">
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                <input type="password" name="password" placeholder="Password">
+              </div>
+              <input type="submit" name="login_btn" value="Продължи">
+              <p>или</p>
+              <div class="google_login">
+                <a href="#">Влизане с Google</a>
+              </div>
+              <div class="facebook_login">
+                <a href="#">Влизане с Facebook</a>
+              </div>
+            </form>
+             <form action="{{route('auth.register')}}" method="POST" id="register_panel">
+                @csrf
+              <h3 class="text-center">Регистрация</h3>
+                <input type="text" name="name" placeholder="Име">
+                <input type="text" name="lastname" placeholder="Фамилия">
+                <input type="text" name="username" placeholder="Потребителско име">
+                <input type="email" name="email" placeholder="Е-поща">
+                <input type="password" name="password" placeholder="Парола">
+                <input type="password" name="re_password" placeholder="Повтори парола">
+                <input type="submit" name="register" value="Регистрация">
+              </form>
+              @if (isset($success))
+                <div class="alert alert-success">
+                    <p>Успешна регистрация</p>
+                </div>
+              @endif
+            <div class="register">
+              <h3 class="text-center">Нов сте в Gamertivity?</h3>
+              <a href="#">Регистрация</a>
+            </div>
+            @if ($errors)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors as $error)
+                        <li>{{$error[0]}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <footer>

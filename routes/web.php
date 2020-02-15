@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/register', 'Auth\\RegisterController@index')->name('register.page');
-Route::post('/register', 'Auth\\RegisterController@create')->name('create.register');
+Route::post('/register', 'Auth\\RegisterController@createAccount')->name('auth.register');
+Route::post('login', 'Auth\\LoginController@create')->name('auth.login');
