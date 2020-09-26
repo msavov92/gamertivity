@@ -44,10 +44,10 @@
                                             <li><a href="#">WOW</a></li>
                                         </ul>
                                     </li>
-                                    <li class="only"><a href="news.php">Новини</a></li>
+                                    <li class="only"><a href="{{route('news.index')}}">Новини</a></li>
                                     <li class="only"><a href="#">Промоции</a></li>
-                                    <li class="only"><a href="contacts.php">Контакти</a></li>
-                                    <li class="only"><a href="faq.php">FAQ</a></li>
+                                    <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
+                                    <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
                                     <li class="login"><a href="{{route('auth.login')}}"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a></li>
                                     <li class="search_bar_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                 </ul>

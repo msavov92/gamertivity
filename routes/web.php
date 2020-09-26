@@ -21,3 +21,17 @@ Route::group(['prefix' => 'auth'], function() {
     Route::get('/register', 'Auth\\RegisterController@index')->name('auth.register');
     Route::post('/register', 'Auth\\RegisterController@createAccount')->name('auth.register.store');
 });
+
+Route::group(['prefix' => 'news'], function() {
+    Route::get('/', 'NewsController@index')->name('news.index');
+});
+Route::group(['prefix' => 'faq'], function() {
+    Route::get('/', 'FaqController@index')->name('faq.index');
+});
+Route::group(['prefix' => 'contact'], function() {
+    Route::get('/', 'ContactController@index')->name('contact.index');
+});
+
+Route::group(['prefix' => 'profile'], function() {
+    Route::get('/', 'ProfileController@index')->name('profile.index');
+});
