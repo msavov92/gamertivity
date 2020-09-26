@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\Http\Requests\RegisterRequest;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -47,67 +48,24 @@ class RegisterController extends Controller
 
 
     public function index() {
-        return view('register');
+        return view('auth.register');
     }
 
-    public function createAccount(Request $request) {
-        $data = $request->all();
+    public function createAccount(RegisterRequest $request) {
+        $data = $request->except('_token');
+        try
+        {
+            $this->user::create([
+                'name' => $data['name'],
+                'lastname' => $data['lastname'],
+                'username' => $data['username'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
 
-        $validator = Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'lastname' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8'],
-        ]);
-
-        if ($validator->fails()) {
-            $messages = $validator->messages();
-            return view('register', [
-                'errors' => json_decode($messages, true),
-                'signup' => true
             ]);
+        } catch (Exception $e) {
+            Log::info($e->getMessage());
         }
-        $this->user::create([
-            'name' => $data['name'],
-            'lastname' => $data['lastname'],
-            'username' => $data['username'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-
-        ]);
-        return view('register', [
-            'success' => true
-        ]);
-    }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
-    }
-
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \App\User
-     */
-    protected function create(array $data)
-    {
-        return $this->user::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        return redirect()->route('auth.login')->with('success', 'Вие се регистрирахте успешно.');
     }
 }

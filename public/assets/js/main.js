@@ -1,7 +1,27 @@
 $(document).ready(function() {
-	$('#myCarousel').carousel({
-		interval: 2000
+	var percent = 0, 
+	bar = $('.transition-timer-carousel-progress-bar'), 
+	crsl = $('#myCarousel');
+	function progressBarCarousel() {
+		bar.css({width:percent+'%'});
+		percent = percent +0.5;
+		if (percent>100) {
+			percent=0;
+			crsl.carousel('next');
+		}      
+	}
+	crsl.carousel({
+		interval: false,
+		pause: true,
 	});
+	var barInterval = setInterval(progressBarCarousel, 30);
+	crsl.hover(
+		function(){
+			clearInterval(barInterval);
+		},
+		function(){
+			barInterval = setInterval(progressBarCarousel, 30);
+		})
 
 	 $('#explore_our_merch_carousel').carousel({
         interval: 5000
@@ -61,12 +81,44 @@ $(document).ready(function() {
 	});
 	// ============ End Responsive mobile menu and show multi menu ============
 
-	// ============ Login/Register Panel ============
+	// ============ Login / Register Panel ============
 	$(".register a").on('click', function() {
-		$("#login_panel, .register").hide(300);
-		$("#register_panel").show("blind");
-		// if ($("#register_panel")) {
-		// 	$(".gamer_connect").css('background', 'transparent')
-		// }
+		$("#login_panel, .register").fadeOut(300);
+		$("#register_panel").fadeIn(300);
+		if($("#register_panel")) {
+			$('.gamer_connect').css('height', '550px')
+		}
 	});
+
+	// ============ Sticky navigation ============ 
+	$(window).on('scroll', function() {
+		if ($(window).scrollTop() > 0) {
+			$('.black_wrap').addClass('sticky');
+		} else {
+			$('.black_wrap').removeClass('sticky');
+		}
+	});
+	$('.search_bar_icon > a').on('click', function() {
+		$('.search_bar input').toggle('bounce', 400)	
+	});	
+
+	// Close all collapse
+
+	// Gallery Filter
+	 $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        if(value == "all") {
+            $('.filter').fadeIn('1500');
+        }
+        else {
+            $(".filter").not('.'+value).fadeOut('3000');
+            $('.filter').filter('.'+value).fadeIn('3000');
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+		$(this).removeClass("active");
+	}	
+	$(this).addClass("active");
+	
 });
