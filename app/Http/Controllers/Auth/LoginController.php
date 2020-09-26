@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginRequest;
 use App\Providers\RouteServiceProvider;
@@ -44,6 +45,18 @@ class LoginController extends Controller
     }
 
     public function authorizeUser(LoginRequest $request) {
+        $data = $request->except('_token');
 
+        if (Auth::attempt(['email' => $data['email'], 'password' => $data['password']])) {
+            return redirect(route('profile.index'));
+        } else {
+            return redirect(route('auth.login'))->with('failed', 'Няма такъв потребител');
+        }
+
+    }
+
+    public function logout() {
+        Auth::logout();
+        return redirect(route('home'));
     }
 }

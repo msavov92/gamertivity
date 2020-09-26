@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
+    @if (!Auth::user())
     <header>
         <div class="black_wrap">
             <div class="container">
@@ -61,3 +62,4 @@
             </div>
         </div>
     </header>
+    @endif

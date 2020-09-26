@@ -13,6 +13,13 @@
             </div>
 
             @endif
+            @if(\Session::has('failed'))
+            <div class="alert alert-danger alert-dismissible">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                <p class="">{{ \Session::get('failed') }}</p>
+            </div>
+
+            @endif
             <form action="{{route('auth.login.authorize')}}" method="POST" id="login_panel">
                 @csrf
               <h3 class="text-center">Влизане</h3>

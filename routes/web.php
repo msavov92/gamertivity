@@ -20,6 +20,7 @@ Route::group(['prefix' => 'auth'], function() {
     Route::post('/authorize', 'Auth\\LoginController@authorizeUser')->name('auth.login.authorize');
     Route::get('/register', 'Auth\\RegisterController@index')->name('auth.register');
     Route::post('/register', 'Auth\\RegisterController@createAccount')->name('auth.register.store');
+    Route::get('/logout', 'Auth\\LoginController@logout')->name('auth.logout');
 });
 
 Route::group(['prefix' => 'news'], function() {
@@ -32,6 +33,6 @@ Route::group(['prefix' => 'contact'], function() {
     Route::get('/', 'ContactController@index')->name('contact.index');
 });
 
-Route::group(['prefix' => 'profile'], function() {
+Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function() {
     Route::get('/', 'ProfileController@index')->name('profile.index');
 });
