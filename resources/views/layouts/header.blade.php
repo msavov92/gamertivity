@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
-    @if (!Auth::user())
     <header>
         <div class="black_wrap">
             <div class="container">
@@ -49,7 +48,23 @@
                                     <li class="only"><a href="#">Промоции</a></li>
                                     <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
                                     <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
-                                    <li class="login"><a href="{{route('auth.login')}}"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a></li>
+                                    @if(Auth::user())
+                                    <div class="right">
+                                        <div class="logout_profile">
+                                            <img src="assets/img/profile_img.png" alt="">
+                                            <h4>Jessica Christopher <i class="fa fa-chevron-down" aria-hidden="true"></i></h4>
+                                            <ul>
+                                                <li><a href="#">Setting</a></li>
+                                                <li><a href="{{route('profile.index')}}">Profile</a></li>
+                                                <li><a href="#">My Messages</a></li>
+                                                <li><a href="#">Lock Screen</a></li>
+                                                <li><a href="{{route('auth.logout')}}">Logout</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    @else
+                                        <li class="login"><a href="{{route('auth.login')}}"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a></li>
+                                    @endif
                                     <li class="search_bar_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                 </ul>
                             </nav>
@@ -62,4 +77,3 @@
             </div>
         </div>
     </header>
-    @endif
