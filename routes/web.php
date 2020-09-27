@@ -36,3 +36,7 @@ Route::group(['prefix' => 'contact'], function() {
 Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function() {
     Route::get('/', 'ProfileController@index')->name('profile.index');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'check.admin', 'namespace' => 'Admin'], function() {
+    Route::get('/', 'AdminController@index');
+});
