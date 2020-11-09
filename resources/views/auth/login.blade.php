@@ -33,6 +33,9 @@
                 <input type="password" name="password" placeholder="Password"/>
                 @error('password') <span class="text-danger">{{$message}} @enderror
               </div>
+              <div class="login_icon text-left repeatPassword">
+                <a href="#">Забравена парола:</a>
+              </div>
               <input type="submit" name="login_btn" value="Продължи">
               <p>или</p>
               <div class="google_login">

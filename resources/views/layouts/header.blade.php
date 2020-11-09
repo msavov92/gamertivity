@@ -12,26 +12,27 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
-    <header>
+    <header id="profile">
         <div class="black_wrap">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="logo">
                             <a href="#">
                                 <img src="{{asset('assets/img/logo.png')}}" alt="Gamertivity Logo">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="gamertivity_nav">
                             <nav id="cssmenu">
                                 <div class="head-mobile"></div>
                                 <div class="button"></div>
                                 <ul class="f_only">
                                     <li class="active only"><a href="{{route('home')}}">Начало</a></li>
-                                    <li class="only"><a href="#">Игри</a>
-                                        <ul>
+                                    <li class="only">
+                                        <a href="#">Игри</a>
+                                        <ul class="toggle_game">
                                             <li><a href="#">League of Legends</a></li>
                                             <li><a href="#">Fortnite</a></li>
                                             <li><a href="#">CS:GO</a></li>
@@ -44,28 +45,28 @@
                                             <li><a href="#">WOW</a></li>
                                         </ul>
                                     </li>
+                                    <li class="only"><a href="">Класация</a></li>
                                     <li class="only"><a href="{{route('news.index')}}">Новини</a></li>
-                                    <li class="only"><a href="#">Промоции</a></li>
+                                    <li class="only"><a href="#">Магазин</a></li>
                                     <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
                                     <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
+                                    <li class="search_bar_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                     @if(Auth::user())
                                     <div class="right">
+                                        <img src="assets/img/profile_img.png" alt="">
                                         <div class="logout_profile">
-                                            <img src="assets/img/profile_img.png" alt="">
-                                            <h4>Jessica Christopher <i class="fa fa-chevron-down" aria-hidden="true"></i></h4>
-                                            <ul>
-                                                <li><a href="#">Setting</a></li>
-                                                <li><a href="{{route('profile.index')}}">Profile</a></li>
-                                                <li><a href="#">My Messages</a></li>
-                                                <li><a href="#">Lock Screen</a></li>
-                                                <li><a href="{{route('auth.logout')}}">Logout</a></li>
+                                            <ul class="profile_menu">
+                                                <span class="user_name">milioo</span>
+                                                <li><a href="{{route('profile.index')}}"><i class="fa fa-user" aria-hidden="true"></i> Профил</a></li>
+                                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Настройки</a></li>
+                                                <li><a href="#"> <i class="fa fa-envelope" aria-hidden="true"></i>Съобщения</a></li>
+                                                <li><a href="{{route('auth.logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Изход</a></li>
                                             </ul>
                                         </div>
                                     </div>
                                     @else
                                         <li class="login"><a href="{{route('auth.login')}}"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a></li>
                                     @endif
-                                    <li class="search_bar_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                                 </ul>
                             </nav>
                             <div class="search_bar">

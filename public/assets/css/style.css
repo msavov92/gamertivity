@@ -20,7 +20,6 @@ header#games {
 }
 header {
     position: relative;
-    margin-bottom: 80px;
     font-family: 'Open Sans', sans-serif;
 }
 .black_wrap {
@@ -28,7 +27,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 996;
     width: 100%;
     height: auto;
     padding: 20px 0;
@@ -135,22 +134,9 @@ header {
 #cssmenu  ul.f_only li a:hover {
     color: #d60000!important;
 }
-/*#cssmenu  ul > li > a:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0%;
-    height: 100%;
-    border-radius: 5px;
-    background: #d60000;
-    transition: 0.4s;
+#cssmenu  ul > .right {
+    display: inline-block;
 }
-#cssmenu > ul > li > a:hover:before {
-    width: 100%;
-    z-index: -1;
-}*/
-
 #cssmenu > ul.f_only > li:hover > a,
 #cssmenu ul.f_only li.active a {
     color: white;
@@ -187,7 +173,7 @@ header {
 }
 
 
-#cssmenu ul.f_only ul{
+#cssmenu ul.f_only ul {
     position: absolute;
     left: -9999px;
 }
@@ -583,7 +569,7 @@ header {
     font-size: 40px;
     font-weight: bold;
     color: #fff;
-    margin: 0 0 100px;
+    margin: 100px 0;
 }
 #trending_topics h2.text-center:before,
 .gallery h2:before {
@@ -681,17 +667,15 @@ header {
 #trending_topics .just_for_gamers .image_b img {
     width: 100%;
     max-width: 450px;
-    position: relative;
-    top: -80px;
-    left: -30px;
+    height: auto;
+    display: block;
+    border-radius: 3px;
 }
 #trending_topics .just_for_gamers .image_r img {
     position: relative;
-    top: -50px;
-    left: 30px;
+    border-radius: 3px;
 }
 #trending_topics .just_for_gamers .info_r {
-    padding: 0 30px;
     color: #fff;
 }
 #trending_topics .just_for_gamers .info_r h2 {
@@ -757,7 +741,7 @@ header {
     text-transform: uppercase;
     color: #fff;
     font-weight: bold;
-    margin: 30px 0;
+    margin: 100px 0 30px;
 }
 #login_form .gamer_connect {
     position: relative;
@@ -765,10 +749,12 @@ header {
     width: 100%;
     max-width: 1200px;
     display: block;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
     padding: 15px 0 0;
-    height: 600px;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
 }
 #login_form .gamer_connect h3 {
     color: #000;
@@ -779,6 +765,34 @@ header {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
+}
+#login_form .gamer_connect form .repeatPassword {
+    margin-top: 20px;
+}
+#login_form .gamer_connect form .repeatPassword a {
+    position: relative;
+    display: inline-block;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+#login_form .gamer_connect form .repeatPassword a:before {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: red;
+    opacity: 0;
+    transition: 0.3s;
+}
+#login_form .gamer_connect form .repeatPassword a:hover:before {
+    opacity: 1;
+    bottom: -5px;
 }
 #login_form .gamer_connect form .login_icon i {
     position: absolute;
@@ -936,15 +950,11 @@ header {
     height: 0;
     background: red;
     z-index: -1;
+    border-radius: 5px;
     transition: 0.3s;
 }
 #login_form .register a:hover:before {
     height: 100%;
-}
-#login_form #register_panel {
-    display: none;
-    position: absolute;
-    top: 20px;
 }
 #login_form #register_panel input {
     width: 100%;
@@ -1108,11 +1118,13 @@ header {
 /*End FAQ*/
 
 /*Footer*/
+
 footer {
     position: relative;
     background: #000;
     color: #fff;
     padding: 30px 0;
+    z-index: 996;
 }
 footer h2 {
     text-transform: uppercase;
@@ -1364,22 +1376,14 @@ footer .all_rights p {
 header#profile {
     position: relative;
     overflow: hidden;
-    height: 90px;
     color: #fff;
+}
+header#profile .black_wrap:before {
+    opacity: 1;
 }
 header#profile .col-md-2,
 header#profile .col-md-10 {
     padding: 0;
-}
-header#profile .logo {
-    text-align: center;
-    background: #272727;
-}
-header#profile .logo img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    padding: 30px;
 }
 header#profile .profile_setting {
     background: #000;
@@ -1394,14 +1398,86 @@ header#profile .profile_setting .social_profile form {
     display: block;
     float: left;
 }
-header#profile .social_profile .logout_profile {
+header#profile .gamertivity_nav {
+    position: relative;
+}
+header#profile .right {
     display: flex;
 }
-header#profile .social_profile .logout_profile img {
+header#profile .right img {
     display: block;
-    width: 100%;
-    max-width: 50px;
-    height: auto;
+    max-width: 35px;
+    height: 35px;
     margin-right: 10px;
+    cursor: pointer;
+}
+header#profile .logout_profile {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+header#profile .logout_profile ul.profile_menu {
+    position: relative;
+    left: 0;
+}
+header#profile .logout_profile ul.profile_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 150px;
+    z-index: 999;
+    background: #484848;
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+header#profile .logout_profile ul li{
+    display: block;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+header#profile .show_profile_navigation {
+    left: 0!important;
+}
+header#profile .show_profile_navigation span {
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Open Sans', sans-serif;
+}
+#profile_view {
+    position: relative;
+    margin-top: 85px;
+}
+#profile_view .gray_side {
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    height: 760px;
+    z-index: 1;
+}
+#profile_view .gray_side:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    background: #424242;
+}
+#profile_view .gray_side ul li {
+    padding: 20px 0;
+}
+#profile_view .gray_side ul li a {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
 }
 /*End Profile*/

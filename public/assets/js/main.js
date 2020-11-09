@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	var percent = 0, 
-	bar = $('.transition-timer-carousel-progress-bar'), 
+	var percent = 0,
+	bar = $('.transition-timer-carousel-progress-bar'),
 	crsl = $('#myCarousel');
 	function progressBarCarousel() {
 		bar.css({width:percent+'%'});
@@ -8,7 +8,7 @@ $(document).ready(function() {
 		if (percent>100) {
 			percent=0;
 			crsl.carousel('next');
-		}      
+		}
 	}
 	crsl.carousel({
 		interval: false,
@@ -90,7 +90,7 @@ $(document).ready(function() {
 		}
 	});
 
-	// ============ Sticky navigation ============ 
+	// ============ Sticky navigation ============
 	$(window).on('scroll', function() {
 		if ($(window).scrollTop() > 0) {
 			$('.black_wrap').addClass('sticky');
@@ -99,8 +99,8 @@ $(document).ready(function() {
 		}
 	});
 	$('.search_bar_icon > a').on('click', function() {
-		$('.search_bar input').toggle('bounce', 400)	
-	});	
+		$('.search_bar input').toggle('bounce', 400)
+	});
 
 	// Close all collapse
 
@@ -115,10 +115,13 @@ $(document).ready(function() {
             $('.filter').filter('.'+value).fadeIn('3000');
         }
     });
-    
+
     if ($(".filter-button").removeClass("active")) {
 		$(this).removeClass("active");
-	}	
+	}
 	$(this).addClass("active");
-	
+
+	$('header#profile .right img').on('click', function() {
+		$('header#profile .profile_menu').toggleClass('show_profile_navigation');
+	});
 });

@@ -3,7 +3,7 @@
     <div class="container">
         <h2 class="text-center">FAQ</h2>
         <div class="row black_bg">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="faq_collapse">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                         <h3>THE STANDARD <span>LOREM IPSUM</span></h3>
@@ -138,18 +138,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="category text-right">
-                    <h3>Категории</h3>
-                    <ul>
-                        <li><a href="#">Lorem ipsum <i class="fa fa-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Dolor sit amet<i class="fa fa-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Consectetur<i class="fa fa-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Adipiscing elit<i class="fa fa-circle" aria-hidden="true"></i></a></li>
-                        <li><a href="#">Riusmod tempor<i class="fa fa-circle" aria-hidden="true"></i></a></li>
-                    </ul>
                 </div>
             </div>
         </div>
