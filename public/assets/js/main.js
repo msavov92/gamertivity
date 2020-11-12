@@ -124,4 +124,18 @@ $(document).ready(function() {
 	$('header#profile .right img').on('click', function() {
 		$('header#profile .profile_menu').toggleClass('show_profile_navigation');
 	});
+
+	$('#news .top_news a article i').on('click', function() {
+		$(this).toggleClass('like');
+		if($(this).hasClass('like') == true) {
+			alert("Вие, успешно добавихте в Любими.")
+		} else {
+			var $confirm = confirm('Сигурни ли сте, че искате да изтриете това');
+			if($confirm == true) {
+				$(this).removeClass('like')
+			} else {
+				$(this).addClass('like')
+			}
+		}
+	});
 });
