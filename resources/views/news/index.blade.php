@@ -41,6 +41,7 @@
                         <article>
                             <img src="assets/img/image2.jpg" alt="">
                             <div class="black_title">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
                                 <p>23.04</p>
                                 <h3>STANDART Lorem <span>Ipsum passage</span></h3>
                             </div>
@@ -54,6 +55,7 @@
                         <article>
                             <img src="assets/img/image2.jpg" alt="">
                             <div class="black_title">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
                                 <p>23.04</p>
                                 <h3>STANDART Lorem <span>Ipsum passage</span></h3>
                             </div>
@@ -78,6 +80,30 @@
             <div class="row">
                 <div class="col-md-5">
                     <img src="assets/img/news2.png" alt="">
+                </div>
+                <div class="col-md-7">
+                     <h3>The standard Lorem Ipsum passage</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etLead the fight against the ruthless</p>
+                    <div class="see_more">
+                        <a href="#">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="assets/img/news3.png" alt="">
+                </div>
+                <div class="col-md-7">
+                     <h3>The standard Lorem Ipsum passage</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore etLead the fight against the ruthless</p>
+                    <div class="see_more">
+                        <a href="#">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="assets/img/news3.png" alt="">
                 </div>
                 <div class="col-md-7">
                      <h3>The standard Lorem Ipsum passage</h3>

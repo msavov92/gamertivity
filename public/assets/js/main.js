@@ -23,10 +23,6 @@ $(document).ready(function() {
 			barInterval = setInterval(progressBarCarousel, 30);
 		})
 
-	 $('#explore_our_merch_carousel').carousel({
-        interval: 5000
-    });
-
 	 // ============ Responsive mobile menu and show multi menu ============
 	$.fn.menumaker = function(options) {
 		var cssmenu = $(this),

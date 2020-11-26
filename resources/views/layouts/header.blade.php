@@ -18,7 +18,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="#">
+                            <a href="{{route('home')}}">
                                 <img src="{{asset('assets/img/logo.png')}}" alt="Gamertivity Logo">
                             </a>
                         </div>
@@ -50,7 +50,11 @@
                                     <li class="only"><a href="#">Магазин</a></li>
                                     <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
                                     <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
-                                    <li class="search_bar_icon"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                                    <li class="search_bar_icon">
+                                        <a href="#">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
                                     @if(Auth::user())
                                     <div class="right">
                                         <img src="assets/img/profile_img.png" alt="">
