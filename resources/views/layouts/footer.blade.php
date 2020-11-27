@@ -5,20 +5,77 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="f_item">
-                    <h2>accusantium</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio laboriosam earum voluptatum nihil, accusamus eveniet voluptate dolores autem nemo officiis sint molestiae ex in delectus veniam. Explicabo necessitatibus porro nam.</p>
+                    <h2>ИНФОРМАЦИЯ</h2>
+                    <ul>
+                        <li>
+                            <a href="#">GDPR</a>
+                        </li>
+                        <li>
+                            <a href="#">За нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Промоции</a>
+                        </li>
+                        <li>
+                            <a href="#">Поверителност</a>
+                        </li>
+                        <li>
+                            <a href="#">Условия за ползване</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="f_item">
-                    <h2>accusantium</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, aut vero pariatur sint tempore officiis cumque nobis veniam inventore consequuntur ducimus harum reiciendis et, ratione minima sed animi, sit quae!</p>
+                    <h2>ОБСЛУЖВАНЕ</h2>
+                    <ul>
+                        <li>
+                            <a href="#">Контакт с нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Връщане на продукти</a>
+                        </li>
+                        <li>
+                            <a href="#">Плащане и доставка</a>
+                        </li>
+                        <li>
+                            <a href="#">Бюлетин Gamertivity</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="f_item">
-                    <h2>accusantium</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio in doloribus error, quibusdam molestiae. Placeat inventore veniam, eligendi, alias maxime dolore fugit amet numquam possimus id nobis molestias doloremque, aliquam!</p>
+                    <h2>Последвайте ни</h2>
+                    <div class="footer_social_link">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/Gamertivity" target="_blank">
+                                    <img src="{{asset('assets/img/social_icon/facebook.png')}}" alt="Follow us in Facebook" title="Follow us in Facebook">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/gamertivity/" target="_blank">
+                                    <img src="{{asset('assets/img/social_icon/instagram.png')}}" alt="Follow us in Instagram" title="Follow us in Instagram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCWdo3Bt4Z0mcdNTT1s-3Lkg" target="_blank">
+                                    <img src="{{asset('assets/img/social_icon/youtube.png')}}" alt="Follow us in YouTube" title="Follow us in YouTube">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.twitch.tv/gamertivity" target="_blank">
+                                    <img src="{{asset('assets/img/social_icon/twitch.png')}}" alt="Follow us in Twitch" title="Follow us in Twitch">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.com/invite/ws3v7qa" target="_blank">
+                                    <img src="{{asset('assets/img/social_icon/discord.png')}}" alt="Follow us in Discord" title="Follow us in Discord">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

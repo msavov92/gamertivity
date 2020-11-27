@@ -78,6 +78,43 @@
     </div>
 </section>
     <section id="trending_topics">
+
+        <div class="just_for_gamers">
+            <div class="container">
+                <h2 class="text-center">За най-любопитните</h2>
+                <div class="black_bg">
+                    <div class="row">
+                        <a href="#" class="flex__wrap">
+                            <div class="image_l">
+                                <img src="assets/img/image6.jpg" alt="">
+                            </div>
+                            <div class="info_r">
+                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eos numquam iste, perspiciatis dolores autem illum et cupiditate sunt ab blanditiis reprehenderit adipisci! Ad accusamus ut, nulla eligendi, at odio.</p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex__wrap text-right">
+                            <div class="info_r">
+                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, neque beatae saepe eum esse labore rerum ipsam, cupiditate excepturi dolorem voluptas eius incidunt eligendi, pariatur qui veritatis corporis magni. Neque?</p>
+                            </div>
+                            <div class="image_r">
+                                <img src="assets/img/image7.jpg" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="flex__wrap">
+                            <div class="image_l">
+                                <img src="assets/img/image8.jpg" alt="">
+                            </div>
+                            <div class="info_r">
+                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error accusantium reprehenderit pariatur rerum eius quas, molestias nulla illum facilis iure necessitatibus beatae dicta? Minima totam, veniam quo cum hic neque?</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -152,42 +189,6 @@
                             </div>
                         </article>
                     </a>
-                </div>
-            </div>
-        </div>
-        <div class="just_for_gamers">
-            <div class="container">
-                <h2 class="text-center">За най-любопитните</h2>
-                <div class="black_bg">
-                    <div class="row">
-                        <a href="#" class="flex__wrap">
-                            <div class="image_l">
-                                <img src="assets/img/image6.jpg" alt="">
-                            </div>
-                            <div class="info_r">
-                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero eos numquam iste, perspiciatis dolores autem illum et cupiditate sunt ab blanditiis reprehenderit adipisci! Ad accusamus ut, nulla eligendi, at odio.</p>
-                            </div>
-                        </a>
-                        <a href="#" class="flex__wrap text-right">
-                            <div class="info_r">
-                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, neque beatae saepe eum esse labore rerum ipsam, cupiditate excepturi dolorem voluptas eius incidunt eligendi, pariatur qui veritatis corporis magni. Neque?</p>
-                            </div>
-                            <div class="image_r">
-                                <img src="assets/img/image7.jpg" alt="">
-                            </div>
-                        </a>
-                        <a href="#" class="flex__wrap">
-                            <div class="image_l">
-                                <img src="assets/img/image8.jpg" alt="">
-                            </div>
-                            <div class="info_r">
-                                <h2>The standard <span class="orange_txt">Lorem Ipsum passage</span></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error accusantium reprehenderit pariatur rerum eius quas, molestias nulla illum facilis iure necessitatibus beatae dicta? Minima totam, veniam quo cum hic neque?</p>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
