@@ -1821,35 +1821,76 @@ li.active:before {
 
 
 @media( max-width : 585px ){
-
     .board {
-width: 90%;
-height:auto !important;
-}
+        width: 90%;
+        height:auto !important;
+    }
     span.round-tabs {
         font-size:16px;
-width: 50px;
-height: 50px;
-line-height: 50px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
     }
     .tab-content .head{
         font-size:20px;
-        }
+    }
     .nav-tabs > li a {
-width: 50px;
-height: 50px;
-line-height:50px;
-}
-
-.nav-tabs > li.active:after {
-content: " ";
-position: absolute;
-left: 35%;
-}
-
-.btn-outline-rounded {
-    padding:12px 20px;
+        width: 50px;
+        height: 50px;
+        line-height:50px;
+    }
+    .nav-tabs > li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+    .btn-outline-rounded {
+        padding:12px 20px;
     }
 }
-
 /* End Ranking */
+
+/* Store */
+#store {
+    position: relative;
+    margin: 150px 0 30px;
+}
+#store h2 {
+    text-align: center;
+}
+#store .box_store {
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin: 10px 0;
+}
+#store .box_store a {
+    position: relative;
+    border: 2px solid orange;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+#store .box_store a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: 0.3s;
+}
+#store .box_store a:hover:before {
+    width: 0%;
+}
+#store .box_store img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}

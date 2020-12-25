@@ -11,6 +11,10 @@
                             <input type="text" name="name" placeholder="Име *">
                         </div>
                         <div class="contact_icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <input type="text" name="userName" placeholder="Профил *">
+                        </div>
+                        <div class="contact_icon">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                             <input type="email" name="email" placeholder="Имейл *">
                         </div>
@@ -23,6 +27,18 @@
                                 <option value="">въпрос 3</option>
                                 <option value="">въпрос 4</option>
                                 <option value="">въпрос 5</option>
+                            </select>
+                        </div>
+                        <div class="contact_icon">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            <select name="question">
+                                <option value="">От къде научихте за нас? *</option>
+                                <option value="">Facebook</option>
+                                <option value="">Instagram</option>
+                                <option value="">YouTube</option>
+                                <option value="">Discord</option>
+                                <option value="">От приятел</option>
+                                <option value="">По друг начин</option>
                             </select>
                         </div>
                         <div class="contact_icon">
