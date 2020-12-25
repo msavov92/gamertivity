@@ -115,82 +115,88 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Аксесоари за геймъри</h2>
+        <div class="welcome_shop">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center">Аксесоари за геймъри</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image3.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsam dolores persp </p>
-                            </div>
-                        </article>
-                    </a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image3.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsam dolores persp </p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image4.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit porro, cumque us </p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image5.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum voluptatibus posro ta!</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image4.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit porro, cumque us </p>
-                            </div>
-                        </article>
-                    </a>
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image3.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsam dolores persp </p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image4.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit porro, cumque us </p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#">
+                            <article>
+                                <img alt="" title="" src="assets/img/image5.jpg">
+                                <div class="black_text">
+                                    <h2>lorem ipsum passage</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum voluptatibus posro ta!</p>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image5.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum voluptatibus posro ta!</p>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image3.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, ipsam dolores persp </p>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image4.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero impedit porro, cumque us </p>
-                            </div>
-                        </article>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="#">
-                        <article>
-                            <img alt="" title="" src="assets/img/image5.jpg">
-                            <div class="black_text">
-                                <h2>lorem ipsum passage</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi ipsum voluptatibus posro ta!</p>
-                            </div>
-                        </article>
-                    </a>
+                <div class="go_shop text-center">
+                    <a href="{{route('store.index')}}">Към магазин</a>
                 </div>
             </div>
         </div>
+
     </section>
     @include('layouts.footer')

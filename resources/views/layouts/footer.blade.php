@@ -1,7 +1,9 @@
 <footer>
-
     <div class="container">
-        @if (!Auth::user())
+        @php
+            $route = \Request::route()->getName();
+        @endphp
+        @if ($route === 'home')
         <div class="row">
             <div class="col-md-4">
                 <div class="f_item">

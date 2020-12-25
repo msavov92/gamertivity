@@ -12,6 +12,67 @@
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
+    @php
+        $route = \Request::route()->getName();
+    @endphp
+    @if($route === 'profile.index')
+    <header id="profile_user">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="login_logo">
+                        <a href="{{route('home')}}">
+                            <img src="{{asset('assets/img/logo.png')}}" alt="Gamertivity Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="social_login">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/Gamertivity" target="_blank">
+                                            <img src="{{asset('assets/img/social_icon/facebook.png')}}" alt="Follow us in Facebook" title="Follow us in Facebook">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/gamertivity/" target="_blank">
+                                            <img src="{{asset('assets/img/social_icon/instagram.png')}}" alt="Follow us in Instagram" title="Follow us in Instagram">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCWdo3Bt4Z0mcdNTT1s-3Lkg" target="_blank">
+                                            <img src="{{asset('assets/img/social_icon/youtube.png')}}" alt="Follow us in YouTube" title="Follow us in YouTube">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.twitch.tv/gamertivity" target="_blank">
+                                            <img src="{{asset('assets/img/social_icon/twitch.png')}}" alt="Follow us in Twitch" title="Follow us in Twitch">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.com/invite/ws3v7qa" target="_blank">
+                                            <img src="{{asset('assets/img/social_icon/discord.png')}}" alt="Follow us in Discord" title="Follow us in Discord">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="user_login">
+                                <a href="#">
+                                    <img src="" alt="">
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    @else
     <header id="profile">
         <div class="black_wrap">
             <div class="container">
@@ -45,9 +106,9 @@
                                             <li><a href="#">WOW</a></li>
                                         </ul>
                                     </li>
-                                    <li class="only"><a href="">Класация</a></li>
+                                    <li class="only"><a href="{{route('ranking.index')}}">Класация</a></li>
                                     <li class="only"><a href="{{route('news.index')}}">Новини</a></li>
-                                    <li class="only"><a href="#">Магазин</a></li>
+                                    <li class="only"><a href="{{route('store.index')}}">Магазин</a></li>
                                     <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
                                     <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
                                     <li class="search_bar_icon">
@@ -57,19 +118,10 @@
                                     </li>
                                     @if(Auth::user())
                                     <div class="right">
-                                        <img src="assets/img/profile_img.png" alt="">
-                                        <div class="logout_profile">
-                                            <ul class="profile_menu">
-                                                <span class="user_name">milioo</span>
-                                                <li><a href="{{route('profile.index')}}"><i class="fa fa-user" aria-hidden="true"></i> Профил</a></li>
-                                                <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Настройки</a></li>
-                                                <li><a href="#"> <i class="fa fa-envelope" aria-hidden="true"></i>Съобщения</a></li>
-                                                <li><a href="{{route('auth.logout')}}"><i class="fa fa-sign-out" aria-hidden="true"></i> Изход</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="{{route('profile.index')}}">
+                                            <img src="assets/img/profile_img.png" alt="">
+                                        </a>
                                     </div>
-                                    @else
-                                        <li class="login"><a href="{{route('auth.login')}}"><i class="fa fa-user-circle" aria-hidden="true"></i> Login</a></li>
                                     @endif
                                 </ul>
                             </nav>
@@ -82,3 +134,6 @@
             </div>
         </div>
     </header>
+    @endif
+
+

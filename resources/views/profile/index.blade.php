@@ -21,14 +21,14 @@
                             <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Настройки</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Изход</a>
+                            <a href="{{route('auth.logout')}}"><i class="fa fa-address-book" aria-hidden="true"></i> Изход</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="white_side">
                 <div class="col-md-9">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam voluptatibus laboriosam alias! Facilis sed sequi laborum ipsum cum nobis aperiam voluptates autem minima, tempora suscipit blanditiis atque fugit earum.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam voluptatibus laboriosam alias! Facilis sed sequi laborum ipsum cum nobis aperiam voluptates autem minima, tempora suscipit blanditiis atque fugit earum13123132.
                 </div>
             </div>
         </div>
