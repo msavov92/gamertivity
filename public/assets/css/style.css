@@ -1866,7 +1866,7 @@ li.active:before {
 }
 #store .box_store a {
     position: relative;
-    border: 2px solid orange;
+    border: 2px solid #ff8945;
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
@@ -1880,14 +1880,14 @@ li.active:before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #333;
-    width: 100%;
+    background: #ff8945;
+    width: 0%;
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 0.3s;
 }
 #store .box_store a:hover:before {
-    width: 0%;
+    width: 100%;
 }
 #store .box_store img {
     display: block;
