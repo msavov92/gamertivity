@@ -15,8 +15,13 @@
 <body>
     @php
         $route = \Request::route()->getName();
+        $profileRoutes = [
+            'profile.index',
+            'profile.favorite',
+
+        ];
     @endphp
-    @if($route === 'profile.index')
+    @if(in_array($route, $profileRoutes))
     <header id="profile_user">
         <div class="container-fluid">
             <div class="row">
@@ -112,18 +117,21 @@
                                     <li class="only"><a href="{{route('store.index')}}">Магазин</a></li>
                                     <li class="only"><a href="{{route('contact.index')}}">Контакти</a></li>
                                     <li class="only"><a href="{{route('faq.index')}}">FAQ</a></li>
-                                    <li class="search_bar_icon">
-                                        <a href="#">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </a>
-                                    </li>
+
                                     @if(Auth::user())
                                     <div class="right">
                                         <a href="{{route('profile.index')}}">
                                             <img src="assets/img/profile_img.png" alt="">
                                         </a>
                                     </div>
+                                    @else
+                                        <li class="only"><a href="{{route('auth.login')}}">Login</a></li>
                                     @endif
+                                    <li class="search_bar_icon">
+                                        <a href="#">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
                                 </ul>
                             </nav>
                             <div class="search_bar">

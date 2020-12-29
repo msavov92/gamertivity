@@ -35,6 +35,7 @@ Route::group(['prefix' => 'contact'], function() {
 
 Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function() {
     Route::get('/', 'ProfileController@index')->name('profile.index');
+    Route::get('/favorite', 'ProfileController@favorite')->name('profile.favorite');
 });
 
 Route::group(['prefix' => 'ranking'], function () {
