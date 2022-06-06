@@ -7,7 +7,15 @@
             </div>
             <div class="white_side">
                 <div class="col-md-9">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam nam voluptatibus laboriosam alias! Facilis sed sequi laborum ipsum cum nobis aperiam voluptates autem minima, tempora suscipit blanditiis atque fugit earum13123132.
+                    <div class="profile_change">
+                        <form method="POST">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
